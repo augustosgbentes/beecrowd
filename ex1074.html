@@ -1,0 +1,23 @@
+<script>
+
+//var prompt=function(t){return lines.shift()}
+
+var N = parseInt(prompt("Digite um valor inteiro até 10000"));
+var cont = 0;
+do{
+    if(N == 0){
+        console.log("NULL");
+    }else if(N % 2 == 0 && N>0){
+        console.log("EVEN POSITIVE")
+    }else if(N % 2 == 0 && N<0){
+        console.log("EVEN NEGATIVE")
+    }else if(N % 2 != 0 && N>0){
+        console.log("ODD POSITIVE")
+    }else if(N % 2 != 0 && N<0){
+        console.log("EVEN NEGATIVE")
+    }
+    cont++
+}while(cont < N)
+
+
+</script>

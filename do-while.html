@@ -1,0 +1,162 @@
+<script>
+//do while
+// while
+//for
+
+//var prompt=function(t){return lines.shift()}
+var N = parseInt(prompt("Entre com o valor inteiro entre 5 e 2000"));
+
+var cont = 1;
+do{
+    
+   if(N % 2 == 0 && cont % 2 == 0){
+    console.log(cont + "^2 = " + cont*cont)
+   }cont++;
+}while(cont <= N );
+
+
+
+</script>
+
+
+//ex 1131 grenais
+
+public static void main(String[] args) throws IOException {
+   Scanner leitor = new Scanner(System.in);
+   int golsInter;
+   int golsGremio;
+   int flag = 1;
+   int totalJogos = 0;
+   int vitoriasGremio = 0;
+   int vitoriasInter = 0;
+   int empates = 0;
+   
+   while (flag == 1) {
+      totalJogos++;
+      golsInter = leitor.nextInt();
+      golsGremio = leitor.nextInt();
+      if (golsInter > golsGremio) vitoriasInter++;
+      else if (golsGremio > golsInter) vitoriasGremio++;
+      else empates++;
+      
+      System.out.println("Novo grenal (1-sim 2-nao)");
+      flag = leitor.nextInt();
+      while (flag != 1 && flag != 2) {
+         System.out.println("Novo grenal (1-sim 2-nao)");
+         flag = leitor.nextInt();
+      }
+   }
+   
+   System.out.println(totalJogos + " grenais");
+   System.out.println("Inter:" + vitoriasInter);
+   System.out.println("Gremio:" + vitoriasGremio);
+   System.out.println("Empates:" + empates);
+   if (vitoriasInter > vitoriasGremio) System.out.println("Inter venceu mais");
+   else if (vitoriasGremio > vitoriasInter) System.out.println("Gremio venceu mais");
+   else System.out.println("Nao houve vencedor");
+ }
+
+}
+
+
+//1094 experiencias
+
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var Amount, Type, C = 0, R= 0, S = 0, total = 0;
+
+//number of test
+var N = parseInt(lines.shift());
+xyz = lines.shift().split(' ');
+
+for(i = 0; i < N; i++)
+{    
+    var Amount  = parseInt(xyz.shift());
+    var Type = xyz.shift();
+    if(i< N-1){
+        xyz = lines.shift().split(' ');  
+    }    
+    if(Type == 'C\r')
+    {
+        C += Amount;
+        total +=  Amount;
+    }
+    else if(Type == 'R\r' )
+    {
+        R += Amount;
+        total += Amount;
+    }
+    else if(Type == 'S\r' )
+    {
+        S += Amount;
+        total += Amount;
+    }
+}
+percentual_coelhos = C/total * 100;
+percentual_ratos = R/total * 100;
+percentual_sapos = S/total * 100;
+
+console.log('Total: ' + total +  ' cobaias');
+console.log('Total de coelhos: '+ C);
+console.log('Total de ratos: '+ R);
+console.log('Total de sapos: '+ S);
+console.log('Percentual de coelhos: '+ percentual_coelhos.toFixed(2) + ' %');
+console.log('Percentual de ratos: '+ percentual_ratos.toFixed(2) +' %');
+console.log('Percentual de sapos: '+ percentual_sapos.toFixed(2) +' %' );
+
+
+//1151
+fibonnaci
+
+public static void main(String[] args) throws IOException {
+   Scanner leitor = new Scanner(System.in);
+   int N = leitor.nextInt();
+   int proximo, anterior = 0, atual = 1;
+   for (int i = 1; i <= N; i++) {
+      if (i == N) System.out.println(anterior);
+      else System.out.print(anterior + " ");
+      proximo = anterior + atual;
+      anterior = atual;
+      atual = proximo;
+   }
+}
+
+}
+
+
+/1153 fatorial
+
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var n = parseInt(lines.shift());
+
+var ans = 1;
+for (let i = 1; i <= n; i++){
+    ans *= i;
+}
+console.log(ans);
+
+
+/1155
+
+
+var s = 1.0;
+for (var i = 2; i <= 100; i++){
+    s += (1.0 / i);
+}
+console.log(s.toFixed(2));
+
+//1156
+
+
+var s = 1.0;
+var x = 2;
+
+for (var i = 3; i < 40 ; i += 2){
+    s += (((1.0) * i) / x);
+    x *= 2;
+}
+
+console.log(s.toFixed(2));
